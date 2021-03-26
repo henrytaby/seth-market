@@ -1,7 +1,5 @@
 package com.seth.market.persistence.entity;
 
-import com.seth.market.domain.Product;
-
 import javax.persistence.*;
 
 @Entity
@@ -15,6 +13,7 @@ public class ComprasProducto {
     private Boolean estado;
 
     @ManyToOne
+    @MapsId("idCompra")
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Compra compra;
 
